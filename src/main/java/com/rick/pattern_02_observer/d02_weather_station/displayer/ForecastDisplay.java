@@ -27,7 +27,10 @@ public class ForecastDisplay implements Observer, DisplayElement {
     }
 
     @Override
-    public void update(float temperature, float humidity, float pressure) {
+    // public void update(float temperature, float humidity, float pressure) {
+    //     display();
+    // }
+    public void update() {
         display();
     }
 }

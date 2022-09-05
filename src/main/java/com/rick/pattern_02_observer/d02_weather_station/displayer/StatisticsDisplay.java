@@ -33,9 +33,10 @@ public class StatisticsDisplay implements Observer, DisplayElement {
     }
 
     @Override
-    public void update(float temperature, float humidity, float pressure) {
-        this.maxTemperature = Math.max(this.maxTemperature, temperature);
-        this.minTemperature = Math.min(this.minTemperature, temperature);
+    // public void update(float temperature, float humidity, float pressure) {
+    public void update() {
+        this.maxTemperature = Math.max(this.maxTemperature, weatherData.getTemperature());
+        this.minTemperature = Math.min(this.minTemperature, weatherData.getTemperature());
         display();
     }
 }

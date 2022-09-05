@@ -26,8 +26,8 @@ public class WeatherStation {
         weatherData.setMeasurements(82, 70, 29.2f);
         weatherData.setMeasurements(78, 90, 29.2f);
 
-        SwingUtilities swingUtilities;
-        PropertyChangeListener propertyChangeListener;
-        JButton jButton;
+        // SwingUtilities swingUtilities;
+        // PropertyChangeListener propertyChangeListener;
+        // JButton jButton;
     }
 }
