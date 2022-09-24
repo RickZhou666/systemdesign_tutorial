@@ -1,14 +1,14 @@
-package com.rick.pattern_10_state.d02_stateversion_gumballmachine;
+package com.rick.pattern_11_proxy.d01_gumballmachine_monitor_remote.d04_stateversion_gumballmachine;
 
 /**
  * @Author: Rick
- * @Date: 2022/9/21 22:11
+ * @Date: 2022/9/21 22:46
  */
-public class SoldState implements State {
+public class WinnerState implements State {
     private static final long serialVersionUID = 2L;
     transient GumballMachine gumballMachine;
 
-    public SoldState(GumballMachine gumballMachine) {
+    public WinnerState(GumballMachine gumballMachine) {
         this.gumballMachine = gumballMachine;
     }
 
@@ -30,12 +30,17 @@ public class SoldState implements State {
     @Override
     public void dispense() {
         gumballMachine.releaseBall();
-
         if (gumballMachine.getCount() == 0) {
-            System.out.println("Oops, out of gumballs!");
             gumballMachine.setState(gumballMachine.getSoldOutState());
         } else {
-            gumballMachine.setState(gumballMachine.getNoQuarterState());
+            gumballMachine.releaseBall();
+            System.out.println("YOU'RE A WINNER! You got two gumballs for your quarter");
+            if (gumballMachine.getCount() > 0) {
+                gumballMachine.setState(gumballMachine.getNoQuarterState());
+            } else {
+                System.out.println("Oops, out of gumballs");
+                gumballMachine.setState(gumballMachine.soldOutState);
+            }
         }
     }
 
@@ -46,6 +51,6 @@ public class SoldState implements State {
 
     @Override
     public String toString() {
-        return "SoldState{}";
+        return "WinnerState{}";
     }
 }

@@ -1,4 +1,4 @@
-package com.rick.pattern_10_state.d02_stateversion_gumballmachine;
+package com.rick.pattern_11_proxy.d01_gumballmachine_monitor_remote;
 
 import java.io.Serializable;
 

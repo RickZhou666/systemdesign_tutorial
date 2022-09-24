@@ -5,7 +5,8 @@ package com.rick.pattern_10_state.d02_stateversion_gumballmachine;
  * @Date: 2022/9/21 22:46
  */
 public class WinnerState implements State {
-    GumballMachine gumballMachine;
+    private static final long serialVersionUID = 2L;
+    transient GumballMachine gumballMachine;
 
     public WinnerState(GumballMachine gumballMachine) {
         this.gumballMachine = gumballMachine;

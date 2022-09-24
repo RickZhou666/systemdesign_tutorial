@@ -1,12 +1,11 @@
-package com.rick.pattern_10_state.d02_stateversion_gumballmachine;
-
+package com.rick.pattern_11_proxy.d01_gumballmachine_monitor_remote.d04_stateversion_gumballmachine;
 
 
 /**
  * @Author: Rick
  * @Date: 2022/9/21 22:05
  */
-public class NoQuarterState implements State{
+public class NoQuarterState implements State {
     private static final long serialVersionUID = 2L;
     transient GumballMachine gumballMachine;
 

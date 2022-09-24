@@ -1,4 +1,4 @@
-package com.rick.pattern_10_state.d02_stateversion_gumballmachine;
+package com.rick.pattern_11_proxy.d01_gumballmachine_monitor_remote.d04_stateversion_gumballmachine;
 
 import java.util.Random;
 
